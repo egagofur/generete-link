@@ -1,9 +1,11 @@
-export default {
+export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
+
   build: {
-    transpile: ["@headlessui/vue"],
+    transpile: ["@headlessui/vue", "vue-toastification"],
   },
-  colorMode: {
-    classSuffix: "",
-  },
-};
+
+  plugins: ["~/plugins/toast.client.ts"],
+  css: ["vue-toastification/dist/index.css"],
+  compatibilityDate: "2024-07-23",
+});

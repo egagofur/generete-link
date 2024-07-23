@@ -61,13 +61,9 @@
 
 <script setup>
 import { encodeData } from "../utils/transformer";
-import { ref } from "vue";
+import { useToast } from "vue-toastification";
 
-const toast = ref(null);
-
-import("vue-toastification").then((module) => {
-  toast.value = module.useToast();
-});
+const toast = useToast();
 
 const data = ref({
   n: "",
@@ -125,7 +121,7 @@ const prefillDemoData = () => {
 const publish = () => {
   const url = `${window.location.origin}/1?data=${encodeData(data.value)}`;
   navigator.clipboard.writeText(url).then(() => {
-    toast.value.success("Link copied to clipboard");
+    toast.success("Link copied to clipboard");
   });
 };
 </script>
