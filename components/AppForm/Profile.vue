@@ -16,6 +16,7 @@
             autocomplete="given-name"
             :value="name"
             @input="$emit('update:name', $event.target.value)"
+            placeholder="Ega Gofur"
             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           />
         </div>
@@ -29,7 +30,7 @@
               name="about"
               rows="3"
               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm placeholder-slate-400"
-              placeholder="I am an astronaut"
+              placeholder="I am an Software Engineer"
               maxlength="100"
               :value="desc"
               @input="$emit('update:desc', $event.target.value)"
@@ -48,7 +49,22 @@
             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             :value="image"
             @input="$emit('update:image', $event.target.value)"
+            placeholder="https://ucarecdn.com/..."
           />
+
+          <div class="mt-4 text-sm text-slate-400">
+            <p>
+              You can use Uploadcare to upload and manage your images. It's free
+              and easy to use.
+            </p>
+            <a
+              href="https://app.uploadcare.com"
+              target="_blank"
+              class="underline"
+            >
+              https://app.uploadcare.com
+            </a>
+          </div>
         </div>
       </div>
     </div>

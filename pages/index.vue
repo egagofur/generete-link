@@ -18,6 +18,7 @@
           v-model:email="data.e"
           v-model:whatsapp="data.w"
           v-model:youtube="data.y"
+          v-model:tiktok="data.tiktok"
         />
         <app-form-hr />
         <app-form-links v-model="data.ls" />
@@ -73,6 +74,7 @@ const data = ref({
   e: "",
   w: "",
   y: "",
+  tiktok: "",
   ls: [],
 });
 
@@ -86,6 +88,7 @@ const prefillDemoData = () => {
     gh: "https://github.com/egagofur",
     w: "+6285655501860",
     l: "https://linkedin.com/in/egagofur",
+    tiktok: "https://tiktok.com/egagofur_",
     ls: [
       {
         l: "My Website",

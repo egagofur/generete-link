@@ -44,7 +44,11 @@
         </a>
       </span>
       <span v-if="acc.w" class="p-1">
-        <a :href="`https://wa.me/${acc.w}`" target="_blank" rel="noopener | noreferrer">
+        <a
+          :href="`https://wa.me/${acc.w}`"
+          target="_blank"
+          rel="noopener | noreferrer"
+        >
           <icon name="ph:whatsapp-logo-duotone" class="h-6 w-6" />
         </a>
       </span>
@@ -54,7 +58,11 @@
         </a>
       </span>
       <span v-if="acc.e" class="p-1">
-        <a :href="`mailto:${acc.e}`" target="_blank" rel="noopener | noreferrer">
+        <a
+          :href="`mailto:${acc.e}`"
+          target="_blank"
+          rel="noopener | noreferrer"
+        >
           <icon name="ph:envelope-duotone" class="h-6 w-6" />
         </a>
       </span>
@@ -66,6 +74,11 @@
       <span v-if="acc.l" class="p-1">
         <a :href="acc.l" target="_blank" rel="noopener | noreferrer">
           <icon name="ph:linkedin-logo-duotone" class="h-6 w-6" />
+        </a>
+      </span>
+      <span v-if="acc.tiktok" class="p-1">
+        <a :href="acc.tiktok" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:tiktok-logo-duotone" class="h-6 w-6" />
         </a>
       </span>
     </div>
@@ -99,7 +112,8 @@ const allSocialLinksAreEmpty = computed(() => {
     !props.acc.y &&
     !props.acc.e &&
     !props.acc.gh &&
-    !props.acc.l
+    !props.acc.l &&
+    !props.acc.tiktok
   );
 });
 </script>
