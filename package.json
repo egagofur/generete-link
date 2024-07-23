@@ -23,6 +23,7 @@
     "@headlessui/vue": "^1.7.8",
     "floating-vue": "^2.0.0-beta.20",
     "js-base64": "^3.7.4",
+    "vue-toastification": "2.0.0-rc.5",
     "vuedraggable": "^4.1.0"
   }
 }
