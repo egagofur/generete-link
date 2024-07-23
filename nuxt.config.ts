@@ -6,5 +6,4 @@ export default {
   colorMode: {
     classSuffix: "",
   },
-  plugins: ["~/plugins/toast.js"],
 };
